@@ -55,17 +55,22 @@
 <br>
 
 
-<img src="https://github.com/alibahrami633/WorkdayScheduler/tree/master/assets/images/screenshot01.png" alt="deployed application image" />
+<img src="https://github.com/alibahrami633/WeatherDashboard/blob/master/assets/screenshot01.png" alt="deployed application image" />
 
 <hr />
 <br>
 
-<img src="https://github.com/alibahrami633/WorkdayScheduler/tree/master/assets/images/screenshot02.png" alt="deployed application image" />
+<img src="https://github.com/alibahrami633/WeatherDashboard/blob/master/assets/screenshot02.png" alt="deployed application image" />
 
 <hr />
 <br>
 
-<img src="https://github.com/alibahrami633/WorkdayScheduler/tree/master/assets/images/screenshot03.png" alt="deployed application image" />
+<img src="https://github.com/alibahrami633/WeatherDashboard/blob/master/assets/screenshot03.png" alt="deployed application image" />
+
+<hr />
+<br>
+
+<img src="https://github.com/alibahrami633/WeatherDashboard/blob/master/assets/screenshot04.png" alt="deployed application image" />
 
 <hr />
 
