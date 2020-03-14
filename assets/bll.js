@@ -31,6 +31,7 @@ function displayCurrentWeather() {
         var queryURL2 = ""; // uv index
         var results = $("#results");
         var fiveForecast = $("#fiveForecast");
+        var iconURL = "";
 
         var div = $("<div>");
         div.addClass("border-top-bottom col-md-12");
@@ -42,6 +43,7 @@ function displayCurrentWeather() {
             url: queryURL1,
             method: "GET"
         }).then(function (response) {
+            console.log(response);
             // checks if the city exist in the array, it will move the city to the first index of the array otherwise will push it
             if (citiesList.includes(cityName) === false && cityName !== "") {
                 if (response) citiesList.push(cityName);
@@ -53,16 +55,17 @@ function displayCurrentWeather() {
 
             localStorage.setItem("citiesList", citiesList);
 
+            iconURL = "http://openweathermap.org/img/wn/" + response.list[0].weather[0].icon + "@2x.png";
             temprature = response.list[0].main.temp;
             humidity = response.list[0].main.humidity;
             windSpeed = response.list[0].wind.speed;
             lat = response.city.coord.lat;
             lon = response.city.coord.lon;
 
-            div.append("<h4>" + response.city.name + " (" + currentDate + ")" + "</h4>");
+            div.append("<h4>" + response.city.name + " (" + currentDate + ")" + "<img src='" + iconURL + "'></h4>");
             div.append("<p>" + "Temprature: " + temprature + "<span class='degree'> &#8451;</span>" + "</p>");
-            div.append("<p>" + "Humidity: " + humidity + "%" + "</p>");
-            div.append("<p>" + "Wind Speed: " + windSpeed + " KPH" + "</p>");
+            div.append("<p>" + "Humidity: " + humidity + "<span class='degree'>%</span></p>");
+            div.append("<p>" + "Wind Speed: " + windSpeed + " <span class='degree'>KPH</p>");
 
             queryURL2 = "http://api.openweathermap.org/data/2.5/uvi?appid=4d5d0bdd780271b5d0440321f345fbb3&lat=" + lat + "&lon=" + lon;
 
@@ -77,8 +80,8 @@ function displayCurrentWeather() {
                 forecastResultDiv.addClass("five-forecast");
 
                 var date = "<p>" + (response.list[i].dt_txt).slice(0, 10) + "</p>"; // slice chooses the date part of the string 0-10
-                var temp = "<p>" + "Temprature: " + response.list[i].main.temp + "<span class='degree'> &#8451;</span>" + "</p>";
-                var humidity = "<p>" + "Humidity: " + response.list[i].main.humidity + "%" + "</p>";
+                var temp = "<p>" + "Temprature: " + response.list[i].main.temp + "<span class='degree'> &#8451;</span></p>";
+                var humidity = "<p>" + "Humidity: " + response.list[i].main.humidity + "<span class='degree'>%</span></p>";
 
                 forecastResultDiv.html(date + temp + humidity);
 
