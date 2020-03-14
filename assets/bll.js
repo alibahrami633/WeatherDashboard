@@ -43,7 +43,7 @@ function displayCurrentWeather() {
             url: queryURL1,
             method: "GET"
         }).then(function (response) {
-            console.log(response);
+
             // checks if the city exist in the array, it will move the city to the first index of the array otherwise will push it
             if (citiesList.includes(cityName) === false && cityName !== "") {
                 if (response) citiesList.push(cityName);
@@ -78,12 +78,12 @@ function displayCurrentWeather() {
             for (var i = 0; i < response.list.length; i += 8) {
                 var forecastResultDiv = $("<div>");
                 forecastResultDiv.addClass("five-forecast");
-
+                var forecastIcon = "<img src='http://openweathermap.org/img/wn/" + response.list[i].weather[0].icon + "@2x.png'>";
                 var date = "<p>" + (response.list[i].dt_txt).slice(0, 10) + "</p>"; // slice chooses the date part of the string 0-10
                 var temp = "<p>" + "Temprature: " + response.list[i].main.temp + "<span class='degree'> &#8451;</span></p>";
                 var humidity = "<p>" + "Humidity: " + response.list[i].main.humidity + "<span class='degree'>%</span></p>";
 
-                forecastResultDiv.html(date + temp + humidity);
+                forecastResultDiv.html(date + forecastIcon + temp + humidity);
 
                 fiveForecast.append(forecastResultDiv);
             }
@@ -100,7 +100,19 @@ function displayUV(queryURL2, div) {
         url: queryURL2,
         method: "GET"
     }).then(function (response) {
-        div.append("<p>" + "UV Index: " + response.value + "</p>");
+        div.append("<p>UV Index: <span class='uvColor'>" + response.value + "</span></p>");
+        if (parseInt(response.value >= 0 && response.value <= 2)) {
+            $(".uvColor").css("background-color", "green");
+        }
+        else if (parseInt(response.value >= 3 && response.value <= 5)) {
+            $(".uvColor").css("background-color", "yellow");
+        }
+        else if (parseInt(response.value >= 6 && response.value <= 7)) {
+            $(".uvColor").css("background-color", "orange");
+        }
+        else {
+            $(".uvColor").css("background-color", "red");
+        }
     });
 }
 
