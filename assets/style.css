@@ -29,3 +29,9 @@ body {
   border: 1px dashed rgb(255, 255, 255);
   padding: 1rem;
 }
+
+.five-forecast {
+  display : inline-block;
+  border: 1px dashed rgb(255, 255, 255);
+  padding: 1rem;
+}

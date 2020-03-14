@@ -12,8 +12,10 @@ function displayCurrentWeather() {
     var windSpeed = "";
     var lat = "";
     var lon = "";
-    var queryURL2 = "";
+    var queryURL2 = ""; // uv index
     var results = $("#results");
+    var fiveForecast = $("#fiveForecast");
+
     var div = $("<div>");
     div.addClass("border-top-bottom");
 
@@ -38,6 +40,24 @@ function displayCurrentWeather() {
         displayUV(queryURL2);
 
         results.html(div);
+
+        for (var i = 0; i < response.list.length; i += 8) {
+            console.log(response.list[i]);
+            var forecastResultDiv = $("<div>");
+            forecastResultDiv.addClass("five-forecast");
+
+            var date = "<p>" + response.list[i].dt_txt + "</p>";
+            var temp = "<p>" + "Temprature: " + response.list[i].main.temp + "</p>";
+            var humidity = "<p>" + "Humidity: " + response.list[i].main.humidity + "</p>";
+
+            forecastResultDiv.html(date + temp + humidity);
+            fiveForecast.append(forecastResultDiv);
+        }
+
+        // response.list.forEach(function (element) {
+        //     console.log(element.dt);
+        // });
+        // console.log(response.list);
     });
 
     // retreives UV index
