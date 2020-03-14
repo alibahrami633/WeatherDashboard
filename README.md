@@ -26,6 +26,7 @@
 ## How to Use
 <hr/>
     <p>
+        The user entry for searching for now is set to Australian cities. In the future development, a country field will be added to the user's choices.
         Users can either type the name of the city to search for the current weather and the next five days of that particular city.
         There is a search history list where a user can find the history of their previous search. The data is kept in the local storage. 
         By clicking on each item of the search history, user can retreive the current weather data and the next five days forecast. 
