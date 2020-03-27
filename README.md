@@ -50,7 +50,7 @@
 
 <hr/>
     <p>
-        <a href="https://alibahrami633.github.io/WeatherDashboard/" target="_blank">Deployed Application </a>
+        <a href="https://alibahrami633.github.io/Weather-Dashboard/" target="_blank">Deployed Application </a>
     </p>
 <hr/>
 <br>
