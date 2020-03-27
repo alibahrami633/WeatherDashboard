@@ -55,7 +55,7 @@ function displayCurrentWeather() {
 
             localStorage.setItem("citiesList", citiesList);
 
-            iconURL = "http://openweathermap.org/img/wn/" + response.list[0].weather[0].icon + "@2x.png";
+            iconURL = "https://openweathermap.org/img/wn/" + response.list[0].weather[0].icon + "@2x.png";
             temprature = response.list[0].main.temp;
             humidity = response.list[0].main.humidity;
             windSpeed = response.list[0].wind.speed;
