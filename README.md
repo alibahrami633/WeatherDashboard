@@ -69,9 +69,4 @@
 <img src="https://github.com/alibahrami633/WeatherDashboard/blob/master/assets/screenshot03.png" alt="deployed application image" />
 
 <hr />
-<br>
-
-<img src="https://github.com/alibahrami633/WeatherDashboard/blob/master/assets/screenshot04.png" alt="deployed application image" />
-
-<hr />
 
