@@ -78,7 +78,7 @@ function displayCurrentWeather() {
             for (var i = 0; i < response.list.length; i += 8) {
                 var forecastResultDiv = $("<div>");
                 forecastResultDiv.addClass("five-forecast");
-                var forecastIcon = "<img src='http://openweathermap.org/img/wn/" + response.list[i].weather[0].icon + "@2x.png'>";
+                var forecastIcon = "<img src='https://openweathermap.org/img/wn/" + response.list[i].weather[0].icon + "@2x.png'>";
                 var date = "<p>" + (response.list[i].dt_txt).slice(0, 10) + "</p>"; // slice chooses the date part of the string 0-10
                 var temp = "<p>" + "Temprature: " + response.list[i].main.temp + "<span class='degree'> &#8451;</span></p>";
                 var humidity = "<p>" + "Humidity: " + response.list[i].main.humidity + "<span class='degree'>%</span></p>";
