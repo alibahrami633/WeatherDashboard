@@ -55,7 +55,7 @@ function displayCurrentWeather() {
 
             localStorage.setItem("citiesList", citiesList);
 
-            iconURL = "http://openweathermap.org/img/wn/" + response.list[0].weather[0].icon + "@2x.png";
+            iconURL = "https://openweathermap.org/img/wn/" + response.list[0].weather[0].icon + "@2x.png";
             temprature = response.list[0].main.temp;
             humidity = response.list[0].main.humidity;
             windSpeed = response.list[0].wind.speed;
@@ -67,7 +67,7 @@ function displayCurrentWeather() {
             div.append("<p>" + "Humidity: " + humidity + "<span class='degree'>%</span></p>");
             div.append("<p>" + "Wind Speed: " + windSpeed + " <span class='degree'>KPH</p>");
 
-            queryURL2 = "http://api.openweathermap.org/data/2.5/uvi?appid=4d5d0bdd780271b5d0440321f345fbb3&lat=" + lat + "&lon=" + lon;
+            queryURL2 = "https://api.openweathermap.org/data/2.5/uvi?appid=4d5d0bdd780271b5d0440321f345fbb3&lat=" + lat + "&lon=" + lon;
 
             displayUV(queryURL2, div);
 
