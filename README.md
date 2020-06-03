@@ -17,7 +17,7 @@
 ## Technologies
 <hr/>
     <p>
-        This application is written using HTML, CSS, JavaScript, Bootstrap, jQuery and Moment.js libraries in addition to <a href="https://openweathermap.org/" target="_blank">OpenWeatherMap API</a>.      
+        This application is written using HTML, CSS, JavaScript, Bootstrap, local storage, jQuery and Moment.js libraries in addition to <a href="https://openweathermap.org/" target="_blank">OpenWeatherMap API</a>.      
     </p>
 <hr/>
 <br>
