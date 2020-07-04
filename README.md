@@ -8,7 +8,8 @@
         This application shows the current weather of different cities based on the users' input.
         Users can either type the name of the city to search for the current weather and the next five days of that particular city.
         There is a search history list where a user can find the history of their previous search. The data is kept in the local storage. 
-        By clicking on each item of the search history, user can retreive the current weather data and the next five days forecast.        
+        By clicking on each item of the search history, user can retreive the current weather data and the next five days forecast.
+        Weather Dashboard is a front-end application that uses a RESTful API to show the weather forecast for a few days to the user based on their searched city name. It also saves the user search on local storage of the user.
     </p>
 <hr/>
 <br>
